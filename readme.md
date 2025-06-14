@@ -20,3 +20,6 @@ source venv/bin/activate
 
 3. Install base requirements
    `pip install -r requirements.txt`
+
+4. Run the app
+   `streamlit run app.py`
