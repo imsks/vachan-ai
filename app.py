@@ -2,6 +2,23 @@ import streamlit as st
 from utils.pdf_loader import extract_text_from_pdf
 from utils.qa_chain import build_qa_chain, run_qa
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+
+import os
+import google.generativeai as genai
+
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+
+# Convert the generator to a list
+models = list(genai.list_models())
+
+# Print model names
+for model in models:
+    print("HERE",model.name)
 
 st.set_page_config(page_title="Vachan - Political Manifesto QA")
 st.markdown("Ask questions to understand what parties have promised")
