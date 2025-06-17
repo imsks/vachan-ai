@@ -23,3 +23,6 @@ source venv/bin/activate
 
 4. Run the app
    `streamlit run app.py`
+
+5. Run Ollma
+   `ollama run llama3.2`
