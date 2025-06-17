@@ -3,8 +3,11 @@ from langchain.chains.question_answering import load_qa_chain
 from langchain.prompts import PromptTemplate
 from langchain.schema import Document
 
+from dotenv import load_dotenv
+load_dotenv()
+
 def build_qa_chain():
-    llm = ChatOpenAI(temperature=0, model="gpt-3.5-turbo")
+    llm = ChatOpenAI(temperature=0, model="gpt-4.1-mini")
 
     template = """
     You are an AI political analyst. Based on the following manifesto document:
